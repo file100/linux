@@ -1,0 +1,36 @@
+Q.2.Experiment: Shell Script to Check Pass or Fail Using If-Else
+
+1. Aim:-
+To write and execute a shell script that accepts the marks of a student and displays whether the student has passed or failed using an if-else statement.
+
+2. Theory:-
+A shell script is a file containing a series of commands executed by a shell interpreter. In Linux, the Bash shell is commonly used to execute shell scripts.
+The if-else statement is a conditional statement used to make decisions based on a given condition.
+If the student's marks are 40 or above, the student is declared Passed.
+If the student's marks are below 40, the student is declared Failed.
+The read command accepts input from the user, and the echo command displays the output.
+
+3. Command Explanation:-
+#!/bin/bash — Specifies the Bash shell interpreter.
+echo — Displays a message on the screen.
+read marks — Accepts the student's marks and stores them in the variable marks.
+if — Checks whether the given condition is true.
+[ "$marks" -ge 40 ] — Checks whether the marks are greater than or equal to 40. The -ge operator means greater than or equal to.
+then — Executes the commands when the condition is true.
+else — Executes the commands when the condition is false.
+fi — Marks the end of the if-else statement.
+chmod +x result.sh — Gives execute permission to the script.
+./result.sh — Executes the shell script.
+
+4. Program:-
+#!/bin/bash
+
+echo "Enter the student's marks:"
+read marks
+
+if [ "$marks" -ge 40 ]
+then
+    echo "Student has Passed."
+else
+    echo "Student has Failed."
+fi
